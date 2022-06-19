@@ -9,7 +9,7 @@ let gizliNumara = Math.trunc(Math.random()*20) + 1;
 let puan = 20;
 
 //En yüksek skorun tutulması:
-let yüksekSkor = 0;
+let yüksekPuan = 0;
 
 //refactoring - 
 
