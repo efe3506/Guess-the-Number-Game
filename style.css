@@ -124,7 +124,7 @@ h1 {
 
 @media screen and (max-width: 800px) {
   main{
-    margin-top: 2rem;
+    margin-top: 5rem;
     flex-direction: column;
   }
   main p{
@@ -137,11 +137,26 @@ h1 {
   header h1{
     font-size: 3rem;
   }
+  main{
+    height: 55vh;
+  }
   .between{
     font-size: 1rem;
   }
   .again{
-    font-size: 1.2rem;
+    font-size: 1.4rem;
     padding: 1rem 2rem;
+  }
+
+  .number{
+    bottom: 55px;
+  }
+
+  .check{
+    font-size: 1.5rem;
+  }
+
+  h1{
+    top: 45%;
   }
 }
