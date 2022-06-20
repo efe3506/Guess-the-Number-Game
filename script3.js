@@ -15,7 +15,41 @@ let yüksekPuan = 0;
 
 const ekranMesajı = function(mesaj){
     document.querySelector('.message').textContent = mesaj;
-  };
+};
+
+//Dil Seçeneği
+
+//if/else bloğu içindeki yazılar nasıl değişecek?
+//puan ve yüksek puan dil değişikliği sonrası çalışmıyor?
+
+//eng
+document.querySelector('.lang1').addEventListener("click", function(){
+  ekranMesajı('Guess...');
+  document.querySelector('.h-1').textContent = "Guess My Number!";
+  document.querySelector('.between').textContent = "Between 1 and 20";
+  document.querySelector('.again').textContent = "Again!";
+  document.querySelector('.check').textContent = "Check!";
+  document.querySelector('.label-score').textContent = "💯 Score:";
+  document.querySelector('.label-highscore').textContent = "🥇 High Score:";
+  document.querySelector('.guess').textContent = ' ';
+  document.querySelector('.score').textContent = '20';
+  document.querySelector('.highscore').textContent = '0'
+
+})
+//tr
+document.querySelector('.lang2').addEventListener("click", function(){
+  ekranMesajı('Tahmin Et...');
+  document.querySelector('.h-1').textContent = "Sayımı Tahmin Et!";
+  document.querySelector('.between').textContent = "1 ile 20 Arasında";
+  document.querySelector('.again').textContent = "Tekrar!";
+  document.querySelector('.check').textContent = "Kontrol Et!";
+  document.querySelector('.label-score').textContent = "💯 Puan:";
+  document.querySelector('.label-highscore').textContent = "🥇 En Yüksek Puan:";
+  document.querySelector('.guess').textContent = ' ';
+  document.querySelector('.score').textContent = '20';
+  document.querySelector('.highscore').textContent = '0'
+  
+})
 
 
 //Tahmin edilecek sayı ve oluşacak eventler
@@ -77,4 +111,6 @@ document.querySelector('.again').addEventListener('click', function(){
     document.querySelector('.number').textContent = '?'
     document.querySelector('.guess').textContent = ' '
   })
+
+
 
