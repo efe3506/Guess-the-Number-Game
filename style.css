@@ -156,5 +156,9 @@ h1 {
   .tr{
     left: 11rem;
   }
+  
+  .right p{
+    text-align: center;
+  }
 
 }
