@@ -14,26 +14,25 @@ html {
 body {
   font-family: 'Press Start 2P', sans-serif;
   color: #eee;
-  background-color: #444;
+  background-color: #555;
   /* background-color: #60b347; */
 }
 
 /* LAYOUT */
 header {
-  width: 100%;
   position: relative;
   height: 35vh;
   border-bottom: 7px solid #eee;
 }
 
 main {
-  width: 100%;
   height: 65vh;
   color: #eee;
   display: flex;
   align-items: center;
   justify-content: space-around;
-} 
+}
+
 
 
 .left {
@@ -82,17 +81,20 @@ h1 {
 .again {
   position: absolute;
   top: 8rem;
-  left: 3.5rem;
+  left: 2rem;
 }
 
-/* .lang{
+.en{
+  left: 1rem;
+}
+
+.en, .tr{
   position: absolute;
   top: 1rem;
-  left: 2rem;
-} */
+}
 
-.lang1{
-  margin:1rem 0 0 3rem;
+.tr{
+  left: 12rem;
 }
 
 .guess {
@@ -132,86 +134,27 @@ h1 {
 }
 
 
-/* responsiveness */
-
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 700px) {
   
   main{
-    margin-top: 5rem;
+    margin-top: 10rem;
     flex-direction: column;
   }
 
-  main p{
-    font-size: 1.6rem;
-    text-align: center;
+  html{
+    font-size: 50%;
   }
 
-  h1{
-    font-size: 3rem;
-  }
-
-  .again, .lang, .lang1, .lang2{
-    font-size: 1.7rem;
-    padding: 1.2rem 2.4rem;
-  }
-
-  .again{
-    top: 6rem;
-    left: 3.5rem;
-  }
-
-  .lang{
-    top: 1rem;
-    left: 2rem;
-  }
-
-}
-
-@media screen and (max-width: 500px){
-
-  header h1{
-    font-size: 2.5rem;
-  }
-
-  .between{
-    font-size: 1rem;
-  }
-
-  .again, .lang, .lang1, .lang2{
-    font-size: 1.4rem;
+  .btn{
     padding: 1rem 2rem;
   }
 
   .again{
-    top: 5rem;
-    left: 3.5rem;
+    top: 6.5rem;
   }
 
-  .lang{
-    top: 1rem;
-    left: 2rem;
-  }
-
-  .left{
-    width: 350px;
-  }
-
-  .right{
-    width: 350px;
-  }
-
-  .number{
-    bottom: 65px;
-    font-size: 4rem;
-  }
-
-  .check{
-    font-size: 1.5rem;
-  }
-
-  h1{
-    top: 45%;
+  .tr{
+    left: 11rem;
   }
 
 }
-

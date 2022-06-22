@@ -10,30 +10,28 @@
   <body>
 
     <header>
-      <h1 class="h-1">Sayımı Tahmin Et!</h1>
-      <p class="between">(1 ile 20 Arasında)</p>
-      <button class="btn again">Tekrar!</button>
-      <button class="btn lang1">EN</button>
-      <button class="btn lang2">TR</button>
+      <h1 class="main-heading">Guess My Number!</h1>
+      <p class="between">(Between 1 and 20)</p>
+      <button class="btn en">EN</button>
+      <button class="btn tr">TR</button>
+      <button class="btn again">Again!</button>
       <div class="number">?</div>
     </header>
 
     <main>
-
       <section class="left">
         <input type="number" class="guess" />
-        <button class="btn check">Kontrol Et!</button>
+        <button class="btn check">Check!</button>
       </section>
       <section class="right">
-        <p class="message">Tahmin Et...</p>
-        <p class="label-score">💯 Puan: <span class="score">20</span></p>
+        <p class="message">Start guessing...</p>
+        <p class="label-score"><span id="label-score">💯 Score:</span> <span class="score">20</span></p>
         <p class="label-highscore">
-          🥇 En Yüksek Puan: <span class="highscore">0</span>
+          <span id="label-highscore">🥇 Highscore: </span> <span class="highscore">0</span>
         </p>
       </section>
-
     </main>
 
-    <script src="script3.js"></script>
+    <script src="script.js"></script>
   </body>
 </html>
