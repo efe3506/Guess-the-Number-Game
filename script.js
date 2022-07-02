@@ -92,7 +92,7 @@ document.querySelector('.again').addEventListener('click', () => {
 
 document.querySelector('.tr').addEventListener("click", () => {
 
-  document.querySelector('.between').textContent = '1 ile 20 Arasında';
+  document.querySelector('.between').textContent = '(1 ile 20 Arasında)';
   document.querySelector('.again').textContent = 'Tekrar!';
   document.querySelector('.again').style.left = '1.25rem';
   document.querySelector('.main-heading').textContent = 'Sayımı Tahmin Et!';
@@ -155,7 +155,67 @@ document.querySelector('.tr').addEventListener("click", () => {
 })
 
 //Ingilizce dil seçeneği
-//Sayfayı yenileyerek default değer olan ingilizceye dönmek için (ya da yukarıdaki bloğu tekrar yazabiliriz.):
-document.querySelector('.en').addEventListener("click", () =>{
-  location.reload();
+//Sayfayı yenileyerek default değer olan ingilizceye dönmek için
+document.querySelector('.en').addEventListener("click", () => {
+
+  document.querySelector('.between').textContent = '(Between 1 and 20)';
+  document.querySelector('.again').textContent = 'Again!';
+  document.querySelector('.again').style.left = '1.25rem';
+  document.querySelector('.main-heading').textContent = 'Guess My Number!';
+  document.querySelector('.check').textContent = 'Check!';
+  document.querySelector('.message').textContent = 'Start guessing...';
+  document.querySelector('#label-score').textContent = '💯 Score:';
+  document.querySelector('#label-highscore').textContent = '🥇 High Score:';
+
+  //Koşul bloğu zaten tanımlandığı için TR dil seçeneğinde gerçekleşecek olan koşullar şu şekildedir:
+  document.querySelector('.check').addEventListener('click', () => {
+    const guess = Number(document.querySelector('.guess').value);
+  
+    //oyuncu hiçbir değer girmeden tahmin yaparsa:
+    if (!guess) {
+     ekranMesajı('⛔️ Insert a number ! ⛔️');
+    }
+  
+    //oyuncunun tahmini doğru olduğu zaman:
+    else if (guess === rastgeleSayı) {
+      ekranMesajı('🎉Congratulations you find it ! ! 🎉');
+      document.querySelector('.number').textContent = rastgeleSayı;
+  
+      if (score > yüksekSkor) {
+        yüksekSkor = score;
+        document.querySelector('.highscore').textContent = yüksekSkor;
+      }
+    }
+  
+    //oyuncunun yanlış tahmin yaptığı koşullar
+  
+    else if (guess !== rastgeleSayı) {
+      if(score > 1){
+        guess < rastgeleSayı ? ekranMesajı('Too low 📉') : ekranMesajı('Too high 📈');
+        document.querySelector('.score').textContent = score;
+      }
+      else{
+        ekranMesajı('👎 You lost ! 👎')
+      }
+    }
+  
+  }
+  
+
+
+  );
+  
+  //En dil seçeneği aktifken oyunu tekrar etmek için:
+  document.querySelector('.again').addEventListener('click', () => {
+    score = 20;
+    document.querySelector('.score').textContent = score;
+    rastgeleSayı = Math.trunc(Math.random() * 20 + 1);
+  
+    document.querySelector('body').style.backgroundColor = '#555';
+    document.querySelector('.number').style.width = '15rem';
+    ekranMesajı('Tahmine başla...')
+    document.querySelector('.number').textContent = '?';
+    document.querySelector('.main-heading').textContent = 'Guess My Number!'
+    document.querySelector('.guess').value = ''
+  });
 })
